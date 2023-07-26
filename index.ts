@@ -20,8 +20,13 @@ app.use("/", (req, res) => {
 mongoose.connect(MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-} as ConnectOptions);
+} as ConnectOptions).then(result => {
+    console.log("DB connected successfully!");
+}).catch(err => {
+    console.log('error ' + err);
+});
 
 app.listen(8000, () => {
+    console.clear;
     console.log("App is running on port 8000");
 });
