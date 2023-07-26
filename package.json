@@ -4,6 +4,7 @@
   "description": "Node JS backend for food service",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
