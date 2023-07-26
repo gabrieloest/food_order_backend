@@ -1,6 +1,10 @@
 import express from 'express';
 
+import { AdminRoute } from './routes';
+
 const app = express();
+
+app.use("/admin", AdminRoute)
 
 app.use("/", (req, res) => {
     return res.json("Hello from Food Order Backend!");
